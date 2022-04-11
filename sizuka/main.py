@@ -1,13 +1,14 @@
 #!/usr/bin/env python
 
+from TabelogScraping import Tabelog
 
-import sample
-
+BASE_URL = "https://tabelog.com/tokyo/A1329/A132904/rstLst/RC/"
 
 def main():
-    # sample パッケージを使った処理
-    ...
+    tokyo_review = Tabelog(BASE_URL,test_mode=False, p_ward='東京都内')
+    
+    #CSV保存
+    tokyo_review.df.to_csv("./out.csv")
 
-
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
