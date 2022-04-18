@@ -8,7 +8,7 @@ def main():
     tokyo_review = Tabelog(BASE_URL,test_mode=False, p_ward='東京都内')
     
     TLins(tokyo_review)
-
+    #review
     isnert(tokyo_review.store_id,tokyo_review.store_name,)
 
     #CSV保存
