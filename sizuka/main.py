@@ -7,6 +7,10 @@ BASE_URL = "https://tabelog.com/tokyo/A1329/A132904/rstLst/RC/"
 def main():
     tokyo_review = Tabelog(BASE_URL,test_mode=False, p_ward='東京都内')
     
+    TLins(tokyo_review)
+
+    isnert(tokyo_review.store_id,tokyo_review.store_name,)
+
     #CSV保存
     tokyo_review.df.to_csv("./out.csv")
 
